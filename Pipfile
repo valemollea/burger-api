@@ -13,6 +13,7 @@ pydantic = "*"
 uvicorn = "*"
 psycopg2-binary = "*"
 psycopg2 = "*"
+attrs = "*"
 
 [dev-packages]
 

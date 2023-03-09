@@ -29,7 +29,7 @@ class Order(Base):
     slug = Column(String(10), nullable=False, index=True)
     purchased_at = Column(DateTime, nullable=True)
     customer_id = Column(Integer, ForeignKey("customers.id"), nullable=False)
-    customer = relationship("Customer", back_populates="orders")
+    customer = relationship("Customer", backref="orders")
     final_price = Column(Integer, nullable=False)
     status = Column(Enum(OrderStatus), nullable=False)
     created_at = Column(DateTime, server_default=func.now(), nullable=False)
