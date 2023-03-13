@@ -41,7 +41,7 @@ class BurgerResponse(BaseModel):
     bread_type: BreadTypes
     base_price: PositiveInt
     is_store_front: bool
-    index_in_store: Optional[int] = 1
+    index_in_store: int
     created_by_user_id: Optional[int]
 
     created_at: datetime
